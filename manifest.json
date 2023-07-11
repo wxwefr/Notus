@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Video Notes",
+  "version": "1.0",
+  "description": "Take notes on videos by marking timestamps and adding descriptions.",
+  "permissions": ["activeTab", "storage"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "16x16.png",
+      "48": "48x48.png",
+      "128": "128x128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
